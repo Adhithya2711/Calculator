@@ -46,14 +46,82 @@ body {
     width: 10px;
   }
   
-  /* Track */
+
   ::-webkit-scrollbar-track {
     box-shadow: inset 0 0 5px grey;
     border-radius: 3px;
   }
   
-  /* Handle */
+
   ::-webkit-scrollbar-thumb {
     background: linear-gradient(to right, #2980b9, #6dd5fa, #ffffff);
     border-radius: 3px;
+  }
+
+
+  /* buttons */
+  .calculator-buttons {
+     display: grid;
+     grid-template-columns: repeat(4,1fr);
+     grid-gap: 10px;
+     padding: 10px;
+  }
+
+  button {
+    min-height: 50px;
+    font-size: 20px;
+    font-weight: 100;
+    border: 2px solid black;
+    border-radius: 5px;
+    cursor: pointer;
+    background: #8edcf8;
+
+  }
+
+  button:hover {
+    filter: brightness(110%);
+  }
+
+  button:active {
+    transform: translateY(2px);
+  }
+
+  button:focus {
+    outline:none ;
+  }
+
+  .operator {
+    background: #06afed;
+    color: white;
+    font-size: 30px;
+  }
+
+  .clear {
+    background: rgba(255, 0, 0, 0.9);
+    color: #ffffff;
+    font-weight: 300;
+    font-size: 1.5rem;
+    
+  }
+
+  .clear:hover{
+    filter: brightness(90%);
+  }
+
+
+  .equal-sign {
+     grid-column: -2;
+     grid-row: 2 /span 4;
+     background: rgb(13, 206, 87);
+
+  }
+
+  /* Media Query: Large Smartphone (Vertical) */
+
+  @media screen and (max-width: 600px) {
+
+    .calculator {
+        width: 94%;
+    }
+    
   }
